@@ -1,36 +1,34 @@
-//Minimum and Maximum element of the array.
+//Minimum and Maximum element of the array
 import java.util.Scanner;
-class Array
+
+public class Array
 {
 	public static void main(String args[])
 	{
 		Scanner ui=new Scanner(System.in);
-		System.out.print("Enter the range of the array : ");
+		System.out.print("Enter the range : ");
 		int range=ui.nextInt();
-		int a[]=new int[range];
+		int arr[]=new int[range];
 		int i;
-		for(i=0;i<a.length;i++)
+		for(i=0;i<arr.length;i++)
 		{
-			System.out.print("Enter number "+(i+1)+" = ");
-			a[i]=ui.nextInt();
-			
+			System.out.print("Enter number "+(i+1)+" : ");
+			arr[i]=ui.nextInt();
 		}
-		int min=a[0],max=a[0];
-		for(i=1;i<a.length;i++)
+		int max=arr[0];
+		int min=arr[0];
+		for(i=1;i<arr.length;i++)
 		{
-			if(min>a[i])
+			if(arr[i]>max)
 			{
-				min=a[i];
+				max=arr[i];
+			}
+			else if(arr[i]<min)
+			{
+				min=arr[i];
 			}
 		}
-		for(i=1;i<a.length;i++)
-		{
-			if(max<a[i])
-			{
-				max=a[i];
-			}
-		}
-		System.out.println("Minimum value is "+min);
-		System.out.println("Maximum value is "+max);
+		System.out.println("Maximum value of the array is "+max);
+		System.out.println("Minimum value of the array is "+min);
 	}
 }
