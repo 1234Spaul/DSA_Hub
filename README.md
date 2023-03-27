@@ -1,1 +1,1 @@
-# 300_codes_challenge
+# 300_DSA_codes_challenge
